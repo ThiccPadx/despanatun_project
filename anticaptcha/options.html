@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AntiCaptcha solver Options</title>
+    <meta name="description" content="AntiCaptcha solver Options" />
+    <link rel="stylesheet" href="/css/cssreset-min.css" />
+    <link rel="stylesheet" href="/css/default.css" />
+</head> 
+<body>
+    <div class="main_container big"> 
+        <img src="/img/anticaptcha-logo/anti.png" data-message-alt="anticaptchaLogoAlt" />
+        <span id="balance" class="balance" data-message-title="balanceTitle"></span>
+        <br /><br /><br />
+        <div class="new_version_message" id="new_version_message">
+            <!--
+            New version 0.1802 of <a target="_blank" href="" title="Download new version of the AntiCaptcha extension">the plug-in available for downloading</a>.
+            What's new: Bug fixes
+            -->
+        </div>
+        <div class="options_form">
+            <input type="checkbox" name="enable" id="enable_checkbox" class="enable_checkbox" data-message-title="enablePluginTitle" /><big><label for="enable_checkbox">&nbsp; <span data-message="enablePlugin"><!--Enable AntiCaptcha plugin--></span></label></big>
+            <br /><br />
+
+            <div class="account_key_title" data-message="accountKeyTitle">
+                <!--Please enter your <a href="https://anti-captcha.com/" target="_blank" title="Anti Captcha: automated captcha solving service.">Anti-Captcha.com</a> account key.-->
+            </div>
+            <img src="/img/icon-lock.png" class="icon_lock" data-message-alt="iconLockAlt" />
+            &nbsp;&nbsp;
+            <input type="text" name="account_key" style="width: 300px" size="48" data-message-title="accountKeyTitleTitle" data-message-placeholder="accountKeyTitlePlaceholder" />
+            <br />
+            <div class="no_key_info">
+                <span data-message="noAccountKey" data-message-title="noAccountKeyTitle"><!--No key?--></span>
+                <div data-message="noAccountKeyInfo">
+                    <!--
+                    <span>X</span>
+                    This plugin requires a special key to get the job done.
+                    <br />
+                    You need to register on <a href="https://anti-captcha.com/" target="_blank" title="Anti Captcha: automated captcha solving service.">Anti-Captcha.com</a>.
+                    <br />
+                    Then add funds and place here the key you can find in "Settings" -> "API setup" section of the website.
+                    -->
+                </div>
+            </div>
+            <br /><br />
+
+            <input type="checkbox" name="auto_submit_form" id="auto_submit_form" data-message-title="autoSubmitFormTitle" /><label for="auto_submit_form"><big>&nbsp; <span data-message="autoSubmitForm"><!-- Auto submit FORM after solving --></span></big><br />
+                    <span data-message="autoSubmitFormInfo">
+                        <!--
+                        This functional may work incorrect on certain websites.<br />
+                        Uncheck it if a webpage reloads after solving.</label>
+                        -->
+                    </span>
+                </label>
+            <br /><br />
+            <input type="checkbox" name="play_sounds" id="play_sounds" data-message-title="playSoundsTitle" /><label for="play_sounds"><big>&nbsp; <span data-message="playSounds"><!--Play sounds--></span></big><br />
+                    <span data-message="playSoundsInfo">
+                        <!--The Plugin plays sound when CAPTCHA found, while solving process and in case of success or error.-->
+                    </span>
+                </label>
+            <br />
+            <br />
+            
+            <!--
+            <fieldset>
+                <legend>Proxy for Funcaptcha</legend>
+                <select style="width: 80px;" required="required" name="user_proxy_protocol">
+                    <option value=""></option>
+                    <option value="HTTP">HTTP</option>
+                    <option value="HTTPS">HTTPS</option>
+                    <option value="SOCKS5">SOCKS5</option>
+                    <option value="SOCKS4">SOCKS4</option>
+                </select>
+                <input type="text" name="user_proxy_server" style="width: 180px;" placeholder="Server" value="" />
+                <input type="text" name="user_proxy_port" style="width: 90px;" placeholder="Port" value="" />
+                <br /><br />
+
+                <input type="text" name="user_proxy_login" style="width: 170px;" placeholder="Login" value="" />
+                <input type="password" name="user_proxy_password" style="width: 170px;" placeholder="Password" value="" />
+            </fieldset>
+            <br />
+            <br />
+            -->
+
+            <fieldset>
+                <legend data-message="recaptchaAcceleratorLegend"><!-- Experemental recaptcha accelerator feature --></legend>
+                <input type="checkbox" name="use_recaptcha_accelerator" id="use_recaptcha_accelerator" data-message-title="useRecaptchaAcceleratorTitle" /><label for="use_recaptcha_accelerator"><big>&nbsp; <span data-message="useRecaptchaAccelerator"><!-- Use Recaptcha accelerator --></span></big><br />
+                        <span data-message="useRecaptchaAcceleratorInfo">
+                            <!--
+                            This feature allows you to let us solve the Recaptcha2 faster by providing minor HTML data that surrounds a Recaptcha block. <br />
+                            By using this HTML data (on an anti-captcha.com side) we can fool a Recaptcha2 so it thinks that it's being solved on an actual web site. <br />
+                            No important data is sent, no input values, not a complete HTML. Only cropped code that includes .g-recaptcha element subtree. <br />
+                            For example: <i> &lt;body&gt;&lt;main class='main'&gt;&lt;form action='/sendForm'&gt;&lt;input type='text' name='somename'&gt;&lt;div class='g-recaptcha'&gt;&lt;/div&gt;&lt;/form&gt;&lt;/main&gt;&lt;/body&gt;</i> <br />
+                            All the attributes except id, class, role, type, name, method, action are stripped. <br />
+                            Please be patient, we are still working on this features but we belive it's gonna save you time and so money!
+                            Эта опция позволит вам решать reCAPTCHA 2 быстрее предоставляя нам небольшой фрагмент HTML, который окружает блок Рекапчи. <br />
+                            Используя эти данные (на стороне anti-captcha.com) мы сможем обмануть Рекапчу, заставя думать, что она решается на настоящем сайте. <br />
+                            Никакие важные данные не отправляются, ни значения полей, ни полный HTML. Только урезанный код, который включает поддерево элемента .g-recaptcha. <br />
+                            Например: <i> &lt;body&gt;&lt;main class='main'&gt;&lt;form action='/sendForm'&gt;&lt;input type='text' name='somename'&gt;&lt;div class='g-recaptcha'&gt;&lt;/div&gt;&lt;/form&gt;&lt;/main&gt;&lt;/body&gt;</i> <br />
+                            Все атрибуты, кроме id, class, role, type, name, method, action, вырезаются. <br />
+                            Пожалуйста запаситесь терпением, мы плотно работаем над этой фичей и верим, что она позволит сэкономить вам время, а следовательно, и деньги!
+                            -->
+                        </span>
+                    </label>
+            </fieldset>
+            <br />
+            
+            <fieldset>
+                <legend data-message="recaptchaPrecachingLegend"><!-- Experemental recaptcha precaching feature --></legend>
+                <input type="checkbox" name="use_recaptcha_precaching" id="use_recaptcha_precaching" data-message-title="useRecaptchaPrecachingTitle" /><label for="use_recaptcha_precaching"><big>&nbsp; <span data-message="useRecaptchaPrecaching"><!-- Use Recaptcha precaching --></span></big><br />
+                        <span data-message="useRecaptchaPrecachingInfo">
+                            <!-- New feature allows you to reduce Recaptcha solving time twice or even more, depending on your usage regime. <br />
+                            More info on a debug page here: <a href="" target="_blank" id="recaptcha_precache_debug_link">Recaptcha precache information</a>. -->
+                        </span>
+                    </label>
+                    <br /><br />
+                    <big data-message="precachingKNumber"><!-- K-number (precachedSolutionsCountK) min and max --></big> <br />
+                    <span data-message="precachingKNumberInfo">
+                        <!--
+                        The number of extra not occupied tasks for precaching. Automatic algorithm adjusts the number between min and max for a better performance and less spending.
+                        Recommended: Min=2, Max=4.
+                        -->
+                    </span>
+                    <br />
+                    Min <input type="range" name="k_precached_solution_count_min" id="k_precached_solution_count_min" min="0" max="10" style="width: 100px; border-color: white;" />
+                    <big><output for="k_count_min" id="k_precached_solution_count_min_output" style="display: inline-block; width: 20px;"></output></big>
+                    &nbsp; &nbsp; &nbsp;
+                    <big><output for="k_count_max" id="k_precached_solution_count_max_output" style="display: inline-block; width: 20px;"></output></big>
+                    <input type="range" name="k_precached_solution_count_max" id="k_precached_solution_count_max" min="0" max="10" style="width: 100px; border-color: white;" /> Max
+                    <span data-dmessage="kPrecachedSolutionCountInfo">
+<!--                        Each precached solution can be not actually solved, but it relates to a-->
+                        <!--Each precached solution can be in several states: new, being solved, solved, processed, expired. <br />-->
+                    </span>
+            </fieldset>
+            
+            <div class="advanced_settings_container">
+                <br />
+                <fieldset>
+                    <legend>Recaptcha</legend>
+
+                    <input type="checkbox" name="solve_recaptcha2" id="solve_recaptcha2" data-message-title="solveRecaptcha2Title" /><label for="solve_recaptcha2"><big>&nbsp; <span data-message="solveRecaptcha2"><!--Solve reCAPTCHA 2--></span></big><br />
+                            <span data-message="solveRecaptcha2Info">
+                                <!--You may turn off this option if you don't need reCAPTCHA 2 being solved. Regular image CAPTCHA will work as usual.-->
+                            </span>
+                        </label>
+                    <br /><br />
+
+                    <input type="checkbox" name="solve_invisible_recaptcha" id="solve_invisible_recaptcha" data-message-title="solveInvisibleRecaptcha2Title" /><label for="solve_invisible_recaptcha"><big>&nbsp; <span data-message="solveInvisibleRecaptcha2"><!-- Solve an invisibile reCAPTCHA automatically --></span></big><br />
+                        <span data-message="solveInvisibleRecaptcha2Info">
+                            <!-- Solve a reCAPTCHA that looks like a small badge that's usually in a right bottom corner of the web page. -->
+                        </span>
+                    </label>
+                    <br /><br />
+
+                    <input type="checkbox" name="dont_reuse_recaptcha_solution" id="dont_reuse_recaptcha_solution" data-message-title="dontReuseRecaptchaSolutionTitle" /><label for="dont_reuse_recaptcha_solution"><big>&nbsp; <span data-message="dontReuseRecaptchaSolution"><!-- Do not reuse previous recaptcha solution on the same web-page --></span></big><br />
+                            <span data-message="dontReuseRecaptchaSolutionInfo">
+                                <!-- A new recaptcha solving process will start for a newly appeared recaptcha box even if there is another reCAPTCHA 2 recently solved (and not yet expired) on this web-page. If off then new solving process will start only after previous solution (on the same web-page) expires. -->
+                            </span>
+                        </label>
+                    <br /><br />
+                    
+                    <input type="checkbox" name="start_recaptcha2_solving_when_challenge_shown" id="start_recaptcha2_solving_when_challenge_shown" data-message-title="startRecaptcha2SolvingWhenChallengeShownTitle" /><label for="start_recaptcha2_solving_when_challenge_shown"><big>&nbsp; <span data-message="startRecaptcha2SolvingWhenChallengeShown"><!-- Start reCAPTCHA 2 solving only when a challenge box is shown --></span></big><br />
+                            <span data-message="startRecaptcha2SolvingWhenChallengeShownInfo">
+                                <!-- A solving process will start only when a reCAPTCHA challenge box with images and stuff is shown. Useful for invisible reCAPTCHA 2: gonna save you some money and will prevent unnecessary callbacks. -->
+                            </span>
+                        </label>
+                    <br /><br />
+                    
+                    <input type="checkbox" name="solve_only_presented_recaptcha2" id="solve_only_presented_recaptcha2" data-message-title="solveOnlyPresentedRecaptcha2Title" /><label for="solve_only_presented_recaptcha2"><big>&nbsp; <span data-message="solveOnlyPresentedRecaptcha2"><!-- Solve only presented on a web-page reCAPTCHA 2 --></span></big><br />
+                            <span data-message="solveOnlyPresentedRecaptcha2Info">
+                                <!-- Differs from the previous option that if it's ON it will only solve a reCAPTCHA 2 that is actually presented on a web-page. reCAPTCHA 2 in an invisible or hidden container won't be solved. -->
+                            </span>
+                        </label>
+                    <br />
+                </fieldset>
+                <br />
+                <input type="checkbox" name="solve_funcaptcha" id="solve_funcaptcha" data-message-title="solveFuncaptchaTitle" /><label for="solve_funcaptcha"><big>&nbsp; <span data-message="solveFuncaptcha"><!-- Solve Funcaptcha automatically --></span></big><br />
+                        <span data-message="solveFuncaptchaInfo">
+                            <!-- Turn off if you want Funcaptcha automatically solving. -->
+                        </span>
+                    </label>
+                <br /><br />
+                <br />
+                <input type="checkbox" name="solve_geetest" id="solve_geetest" data-message-title="solveGeetestTitle" /><label for="solve_geetest"><big>&nbsp; <span data-message="solveGeetest"><!-- Solve Geetest automatically --></span></big><br />
+                    <span data-message="solveGeetestInfo">
+                                <!-- Turn off if you want Geetest automatically solving. -->
+                            </span>
+                </label>
+                <br /><br />
+                <input type="checkbox" name="use_predefined_image_captcha_marks" id="use_predefined_image_captcha_marks" data-message-title="usePredefinedImageCaptchaMarksTitle" /><label for="use_predefined_image_captcha_marks"><big>&nbsp; <span data-message="usePredefinedImageCaptchaMarks"><!--Use predefined regular image CAPTCHA marks--></span></big><br />
+                        <span data-message="usePredefinedImageCaptchaMarksInfo">
+                            <!-- Regular image CAPTCHA will be automatically found, marked and solved on every page. It's based on selection of other users. Disable if you want to mark image CAPTCHAs on your own. -->
+                        </span>
+                    </label>
+            </div>
+            
+            <br />
+
+            <input type="button" data-message-value="advancedSettingsButtonValue" data-message-title="advancedSettingsButtonTitle" id="advanced_settings_button" class="advanced_settings_button" />
+            <input type="submit" data-message-value="saveButtonValue" data-message-title="saveButtonTitle" id="save" class="save_button" />
+            <div class="clearfix"></div>
+        </div>
+        <br />
+        <a href="https://antcpt.com/eng/support.html" style="float: right;" data-message-link="leaveFeedbackLink" target="_blank" data-message-title="leaveFeedbackTitle" data-message="leaveFeedback"><!--Leave feedback--></a>
+        <a href="https://anti-captcha.com/clients/help/tickets/list/all" style="float: left;" data-message-link="anticaptchaHelpLink" target="_blank" data-message-title="anticaptchaHelpTitle" data-message="anticaptchaHelp"><!--Anti-captcha.com account support--></a>
+        <br />
+        <br />
+        <span id="status" class="status_message" data-message-title="statusMessageTitle"></span>
+        <br />
+        <span id="error" class="error_message" data-message-title="errorMessageTitle"></span>
+        <div class="clearfix"></div>
+    </div>
+
+    <script src="/js/options_all.js"></script>
+</body>
+</html>

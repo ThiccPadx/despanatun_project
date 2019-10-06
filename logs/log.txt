@@ -1,0 +1,80 @@
+Captcha failed
+20:03:38
+Captcha failed
+20:03:59
+Place found!!!
+20:04:36
+
+Started at:
+08:55:57
+Captcha failed
+08:56:18
+Place found!!!
+08:56:55
+Place found!!!
+08:59:21
+Captcha failed
+08:59:42
+Captcha failed
+09:00:03
+Captcha failed
+09:00:25
+Place found!!!
+09:01:01
+Captcha failed
+09:01:23
+
+Started at:
+09:14:53
+Lack of available dates
+09:15:15
+Captcha failed
+09:15:36
+
+Started at:
+09:16:12
+Captcha failed
+09:16:34
+Captcha failed
+09:16:55
+Captcha failed
+09:17:16
+Lack of available dates
+09:17:37
+Lack of available dates
+09:17:59
+Captcha failed
+09:18:20
+Lack of available dates
+09:18:42
+Lack of available dates
+09:19:04
+Captcha failed
+09:19:25
+
+
+
+Started at:
+09:42:48
+Captcha failed
+09:43:10
+Lack of available dates
+09:43:32
+Captcha failed
+09:43:53
+Captcha failed
+09:44:14
+Captcha failed
+09:44:35
+Captcha failed
+09:44:56
+Caught by website 
+09:45:17
+Lack of available dates
+09:45:39
+Captcha failed
+09:46:00
+Captcha failed
+09:46:21
+Captcha failed
+09:46:42

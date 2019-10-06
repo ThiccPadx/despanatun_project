@@ -1,0 +1,157 @@
+body {
+    margin: 14px 17px;
+    font-family: "Helvetica Neue", "Lucida Grande", sans-serif !important;
+    font-size: 12px;
+}
+
+a
+{
+    color: white;
+}
+
+fieldset {
+    padding: 5px 10px 10px 10px;
+    border: 1px solid white;
+}
+
+fieldset legend {
+    color: white;
+    padding: 0 5px;
+}
+
+.clearfix
+{
+    font-size: 0pt;
+    clear: both;
+    height: 0px;
+    display: block;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+.main_container
+{
+    background: #224066;
+    padding: 15px;
+    width: 400px;
+}
+
+.main_container.big
+{
+}
+
+.main_container.small
+{
+    height: 80px;
+    width: 120px;
+}
+
+.account_key_title {
+    margin-left: 36px;
+}
+
+.no_key_info {
+    margin-left: 36px;
+    position: absolute;
+}
+
+.no_key_info > span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.no_key_info > span:hover {
+    text-decoration: none;
+}
+
+.no_key_info.expanded {
+    background: #224066;
+
+    border: solid #ffffff 2px;
+    border-radius: 10px;
+
+    width: 300px;
+
+    padding: 10px;
+    margin-left: 24px;
+    margin-top: -12px;
+}
+
+.no_key_info > div {
+    display: none;
+    margin-top: 5px;
+}
+
+.no_key_info.expanded > div {
+    display: block;
+    font-size: 1.1em;
+}
+
+.no_key_info.expanded > div > span {
+    display: block;
+    float: right;
+    margin-top: -21px;
+    cursor: pointer;
+}
+
+.balance
+{
+    color: white;
+    text-align: right;
+    float: right;
+    font-size: 1.3em;
+    width: 280px;
+}
+
+.new_version_message {
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+.options_form
+{
+    background: #0b1420;
+    color: white;
+    padding: 10px;
+}
+
+.enable_checkbox
+{
+}
+
+.icon_lock
+{
+    vertical-align: middle;
+}
+
+.save_button
+{
+    float: right;
+    font-size: 1.1em;
+}
+
+.advanced_settings_button
+{
+    float: left;
+    font-size: 1.1em;
+}
+
+.advanced_settings_container
+{
+    display: none;
+}
+
+.status_message
+{
+    color: white;
+}
+
+.error_message
+{
+    color: red;
+}
